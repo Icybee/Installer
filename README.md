@@ -7,6 +7,8 @@ the "core" config, which is required to run Icybee.
 The interface is currently available in English and French. The language can be changed on the fly
 at any step of the install process.
 
+![](http://icybee.org/public/install.png)
+
 
 
 
