@@ -33,7 +33,7 @@ class UserConfigRequirement extends Requirement
 
 	public function __invoke(Errors $errors)
 	{
-		$pathname = WEBSITE_CONFIG_ROOT . 'user.php';
+		$pathname = WEBSITE_CONFIG_DIR . 'user.php';
 
 		if (file_exists($pathname))
 		{

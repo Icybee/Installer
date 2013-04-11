@@ -36,7 +36,7 @@ class CoreConfigRequirement extends Requirement
 	 */
 	public function __invoke(Errors $errors)
 	{
-		$pathname = WEBSITE_CONFIG_ROOT . 'core.php';
+		$pathname = WEBSITE_CONFIG_DIR . 'core.php';
 
 		if (file_exists($pathname))
 		{
