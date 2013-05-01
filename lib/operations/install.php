@@ -98,14 +98,19 @@ class InstallOperation extends \ICanBoogie\Operation
 		global $core;
 
 		$modules = $core->modules;
+		$modules->index;
 
-		$modules->enable('images');
-		$modules->enable('thumbnailer');
-
+		$ids = array();
 		$errors = new Errors();
 		$is_installed_errors = new Errors();
 
-		foreach ($modules->enabled_modules_descriptors as $id => $descriptor)
+		foreach ($modules->descriptors as $id => $descriptor)
+		{
+			$ids[] = $id;
+			$modules->enable($id);
+		}
+
+		foreach ($modules->descriptors as $id => $descriptor)
 		{
 			$module = $modules[$id];
 
@@ -116,6 +121,8 @@ class InstallOperation extends \ICanBoogie\Operation
 				$module->install($errors);
 			}
 		}
+
+		$core->vars['enabled_modules'] = $ids;
 
 		\Icybee\Modules\Nodes\Module::create_default_routes();
 
