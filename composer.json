@@ -2,7 +2,7 @@
 	"name": "icybee/installer",
 	"type": "library",
 	"description": "Icybee installer",
-	"keywords": ["cms"],
+	"keywords": [ "installer" ],
 	"homepage": "http://icybee.org/",
 	"license": "BSD-3-Clause",
 	"authors": [
@@ -21,6 +21,7 @@
 		"php": ">=5.3.0"
 	},
 	"autoload": {
-		"classmap": [ "lib/" ]
+		"classmap": [ "lib/" ],
+		"files": [ "bootstrap.php" ]
 	}
 }
