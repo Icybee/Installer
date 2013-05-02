@@ -100,14 +100,14 @@ EOT
 		(
 			'error' => array
 			(
-				'not_writable' => "Impossible d'écrire la configuration <q>core</q>: <code>!pathname</code>"
+				'not_writable' => "Impossible d'écrire la configuration&nbsp;: <code>!pathname</code>"
 			),
 
 			'title' => "La configuration <q>core</q>",
 			'description' => <<<EOT
 La configuration <q>core</q> contient les paramètres requis pour se connecter à la base de
-données (en autres choses). Les lignes suivantes ont été créées en fonction des paramètres que vous
-avez fourni. Veuillez les copier dans le fichier de configuration. :action
+données (entre autres choses). Les lignes suivantes ont été créées en fonction des paramètres que
+vous avez fourni. Veuillez les copier dans le fichier de configuration. :action
 
 :data
 EOT
@@ -130,10 +130,29 @@ créées pour vos images, quelques caches et quelques paramètres. Afin que PHP 
 le contenu du dossier, son propriétaire devrait être <code>www-data</code> et ses permissions misent
 à <code>755</code>. :action
 EOT
+		),
+
+		# lib/requirements/user-config.php
+
+		'user_config' => array
+		(
+			'error' => array
+			(
+				'create' => "Le fichier de configuration est manquant et n'a pas pu être créé&nbsp: <code>:path</code>"
+			),
+
+			'title' => "La configuration <q>user</q>",
+			'description' => <<<EOT
+La configuration <q>user</q> contient les paramètres requis pour la gestion des mots de passe.
+Les lignes suivantes ont été créées spécialement pour vous. Veuillez les copier dans le fichier de
+configuration. :action
+
+:data
+EOT
 		)
 	),
 
-	'language.description' => "D'autres langues peuvent être utilisé grâce à des packs de langue.",
+	'language.description' => "D'autres langues peuvent être utilisées grâce à des packs de langue.",
 
 	"Check again" => "Vérifier à nouveau",
 	"Let's go!" => "C'est parti !",

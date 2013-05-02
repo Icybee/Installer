@@ -100,7 +100,7 @@ EOT
 		(
 			'error' => array
 			(
-				'not_writable' => "Unable to write the <q>core</q> configuration: <code>!pathname</code>"
+				'not_writable' => "Unable to write the configuration: <code>!pathname</code>"
 			),
 
 			'title' => "The <q>core</q> configuration",
@@ -155,16 +155,15 @@ EOT
 		(
 			'error' => array
 			(
-				'create' => "The user configuration file is missing and could not be created: <code>:path</code>"
+				'create' => "The configuration file is missing and could not be created: <code>:path</code>"
 			),
 
-			'title' => "The <code>user</code> configuration",
+			'title' => "The <q>user</q> configuration",
 			'description' => <<<EOT
-The <code>user</code> configuration contains parameters required to provide security
-regarding password management. The following lines have been created just for you.
-Please copy them to the configuration file. :action
+The <q>user</q> configuration contains parameters required to manage passwords. The following
+lines have been created just for you. Please copy them to the configuration file. :action
 
-<textarea class="span8" readonly="readonly">!data</textarea>
+:data
 EOT
 		)
 	),

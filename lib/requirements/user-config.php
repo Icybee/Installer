@@ -26,7 +26,7 @@ class UserConfigRequirement extends Requirement
 			'requirement.user_config.description', array
 			(
 				'action' => new TellMeMore('user_config'),
-				'data' => $this->get_data()
+				'data' => '<textarea class="span8" readonly="readonly">' . \ICanBoogie\escape($this->get_data()) . '</textarea>'
 			)
 		);
 	}
@@ -52,9 +52,9 @@ class UserConfigRequirement extends Requirement
 
 	public function get_data()
 	{
-		$password_salt = \ICanboogie\generate_token(64, \ICanBoogie\TOKEN_WIDE);
-		$unlock_login_salt = \ICanboogie\generate_token(64, \ICanBoogie\TOKEN_WIDE);
-		$nonce_login_salt = \ICanboogie\generate_token(64, \ICanBoogie\TOKEN_WIDE);
+		$password_salt = \ICanboogie\generate_token_wide();
+		$unlock_login_salt = \ICanboogie\generate_token_wide();
+		$nonce_login_salt = \ICanboogie\generate_token_wide();
 
 		return <<<EOT
 <?php
