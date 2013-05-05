@@ -55,7 +55,6 @@ class DatabaseForm extends PanelForm
 						array
 						(
 							Group::LABEL => "Password",
-							Element::REQUIRED => true,
 
 							'type' => 'password'
 						)
