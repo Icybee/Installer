@@ -40,7 +40,7 @@ class RequirementsOperation extends Operation
 			return;
 		}
 
-		$this->response->messages = t('panel.welcome.success');
+		$this->response->message = t('panel.welcome.success');
 
 		return parent::process();
 	}

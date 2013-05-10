@@ -187,7 +187,7 @@ window.addEvent('domready', function() {
 
 				nextPanel()
 
-				flashAlert(welcome, welcome.get('data-message'))
+				flashAlert(welcome, response.message)
 			},
 
 			onFailure: function(xhr, response)
@@ -221,6 +221,17 @@ window.addEvent('domready', function() {
 
 			url: 'install/install',
 
+			onRequest: function()
+			{
+				el.disabled = true
+				el.getParent('.install-panel').getElements('.alert-danger').dispose()
+			},
+
+			onComplete: function()
+			{
+				el.disabled = false
+			},
+
 			onSuccess: function(response)
 			{
 
@@ -231,11 +242,11 @@ window.addEvent('domready', function() {
 				if (response.content)
 				{
 					var content = response.content
-					, el = install.getElement('.install-panel-content')
+					, contentEl = install.getElement('.install-panel-content')
 
-					if (el)
+					if (contentEl)
 					{
-						el.innerHTML = content
+						contentEl.innerHTML = content
 					}
 					else
 					{
@@ -278,7 +289,7 @@ window.addEvent('domready', function() {
 							}
 						)
 
-						alert.inject(install.getElement('.install-panel-content'), 'top')
+						alert.inject(el.getParent('p'), 'before')
 					}
 				}
 			}
