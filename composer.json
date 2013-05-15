@@ -18,7 +18,8 @@
 		"source": "https://github.com/Icybee/Installer"
 	},
 	"require": {
-		"php": ">=5.3.0"
+		"php": ">=5.3.0",
+		"icanboogie/icanboogie": "*"
 	},
 	"autoload": {
 		"classmap": [ "lib/" ],
