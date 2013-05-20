@@ -37,8 +37,7 @@ class DocumentDecorator
 		$document->css->add(\Icybee\ASSETS . 'admin-more.css', -100);
 		$document->css->add(ASSETS . 'page.css');
 
-		$document->js->add(\Icybee\ASSETS . 'mootools-core.js', -100);
-		$document->js->add(\Icybee\ASSETS . 'mootools-more.js', -100);
+		$document->js->add(\Icybee\ASSETS . 'mootools.js', -100);
 		$document->js->add(\ICanBoogie\ASSETS . 'icanboogie.js', -100);
 		$document->js->add(\Brickrouge\ASSETS . 'brickrouge.js', -100);
 		$document->js->add(ASSETS . 'page.js');
