@@ -110,6 +110,8 @@ class InstallOperation extends \ICanBoogie\Operation
 			$modules->enable($id);
 		}
 
+		$core();
+
 		foreach ($modules->descriptors as $id => $descriptor)
 		{
 			$module = $modules[$id];
