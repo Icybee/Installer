@@ -57,6 +57,12 @@ $core = new \Icybee\Core
 $_SERVER['ICANBOOGIE_READY_TIME_FLOAT'] = microtime(true);
 
 #
+# session
+#
+
+$core->session = \ICanBoogie\Session::get_session($core);
+
+#
 # language
 #
 
