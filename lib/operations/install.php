@@ -19,6 +19,7 @@ use ICanBoogie\Errors;
 use Icybee\Modules\Pages\Page;
 use Icybee\Modules\Sites\Site;
 use Icybee\Modules\Users\User;
+use ICanBoogie\I18n\FormattedString;
 
 class InstallOperation extends \ICanBoogie\Operation
 {
@@ -62,7 +63,9 @@ class InstallOperation extends \ICanBoogie\Operation
 			return;
 		}
 
-		return;
+		$this->response->message = new FormattedString("Icybee has been successfuly installed.");
+
+		return true;
 	}
 
 	/**
