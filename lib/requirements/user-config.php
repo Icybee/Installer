@@ -53,17 +53,13 @@ class UserConfigRequirement extends Requirement
 	public function get_data()
 	{
 		$password_salt = \ICanboogie\generate_token_wide();
-		$unlock_login_salt = \ICanboogie\generate_token_wide();
-		$nonce_login_salt = \ICanboogie\generate_token_wide();
 
 		return <<<EOT
 <?php
 
 return array
 (
-	'password_salt' => '$password_salt',
-	'unlock_login_salt' => '$unlock_login_salt',
-	'nonce_login_salt' => '$nonce_login_salt'
+	'password_salt' => '$password_salt'
 );
 EOT;
 	}
