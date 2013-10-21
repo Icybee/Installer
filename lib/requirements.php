@@ -93,7 +93,6 @@ class WelcomeRequirements extends Requirements
 			I18n\t("Before we can continue, you need to check the following things:"), array
 			(
 				'repository' => new RepositoryRequirement,
-				'user_config' => new UserConfigRequirement,
 				'pdo_drivers' => new PDODriversRequirement
 			)
 		);
