@@ -15,7 +15,7 @@ the fly at any step of the install process.
 
 ## Requirements
 
-The package requires PHP 5.3 or later.
+The package requires PHP 5.4 or later.
   
 An installation similar to [Icybee/Starter](https://github.com/Icybee/Starter/) must be deployed,
 this includes the installation of Icybee.
@@ -31,10 +31,10 @@ Create a `composer.json` file and run `php composer.phar install` command to ins
 
 ```json
 {
-    "minimum-stability": "dev",
-    "require": {
-		"icybee/installer": "*"
-    }
+	"minimum-stability": "dev",
+	"require": {
+		"icybee/installer": "2.x"
+	}
 }
 ```
 

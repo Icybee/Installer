@@ -68,25 +68,22 @@ class CoreConfigRequirement extends Requirement
 		return <<<EOT
 <?php
 
-return array
-(
-	'connections' => array
-	(
-		'primary' => array
-		(
+return [
+
+	'connections' => [
+
+		'primary' => [
+
 			'dsn' => 'mysql:dbname=$name;host=$host',
 			'username' => '$username',
 			'password' => '$password',
 			'#timezone' => '+00.00',
 			'#table_name_prefix' => '$prefix'
-		)
-	),
+		]
 
-	'modules paths' => array
-	(
-		\$path . 'modules'
-	)
-);
+	]
+
+];
 EOT;
 	}
 }

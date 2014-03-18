@@ -1,4 +1,7 @@
+.README.md.html
+.TODO.md.html
 composer.lock
 composer.phar
 docs
+TODO.md
 vendor
