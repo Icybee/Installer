@@ -14,29 +14,29 @@ namespace Icybee\Installer;
 use ICanBoogie\Errors;
 
 /**
- * Requirements for the "core" config.
+ * Requirements for the "activerecord" config.
  */
-class CoreConfigRequirement extends Requirement
+class ActiveRecordConfigRequirement extends Requirement
 {
 	public function __construct()
 	{
-		$this->title = t('requirement.core_config.title');
+		$this->title = t('requirement.activerecord_config.title');
 		$this->description = t
 		(
-			'requirement.core_config.description', array
+			'requirement.activerecord_config.description', array
 			(
-				'action' => new TellMeMore('core_config'),
+				'action' => new TellMeMore('activerecord_config'),
 				'data' => '<textarea class="span8" readonly="readonly">' . \ICanBoogie\escape($this->get_data()) . '</textarea>'
 			)
 		);
 	}
 
 	/**
-	 * Checks that the "core" config exists or can be created.
+	 * Checks that the "activerecord" config exists or can be created.
 	 */
 	public function __invoke(Errors $errors)
 	{
-		$pathname = WEBSITE_CONFIG_DIR . 'core.php';
+		$pathname = WEBSITE_CONFIG_DIR . 'activerecord.php';
 
 		if (file_exists($pathname))
 		{
@@ -50,7 +50,7 @@ class CoreConfigRequirement extends Requirement
 			return;
 		}
 
-		$errors['core_config'] = t('requirement.core_config.error.not_writable', array('pathname' => \ICanBoogie\strip_root($pathname)));
+		$errors['activerecord_config'] = t('requirement.activerecord_config.error.not_writable', array('pathname' => \ICanBoogie\strip_root($pathname)));
 	}
 
 	public function get_data()

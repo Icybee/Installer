@@ -107,7 +107,7 @@ class InstallRequirements extends Requirements
 		(
 			I18n\t("Before we can continue, you need to check the following things:"), array
 			(
-				'core_config' => new CoreConfigRequirement
+				'activerecord_config' => new ActiveRecordConfigRequirement
 			)
 		);
 	}

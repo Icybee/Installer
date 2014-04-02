@@ -94,18 +94,18 @@ EOT
 
 	'requirement' => array
 	(
-		# lib/requirements/core-config.php
+		# lib/requirements/activerecord-config.php
 
-		'core_config' => array
+		'activerecord_config' => array
 		(
 			'error' => array
 			(
 				'not_writable' => "Impossible d'écrire la configuration&nbsp;: <code>!pathname</code>"
 			),
 
-			'title' => "La configuration <q>core</q>",
+			'title' => "La configuration <q>activerecord</q>",
 			'description' => <<<EOT
-La configuration <q>core</q> contient les paramètres requis pour se connecter à la base de
+La configuration <q>activerecord</q> contient les paramètres requis pour se connecter à la base de
 données (entre autres choses). Les lignes suivantes ont été créées en fonction des paramètres que
 vous avez fourni. Veuillez les copier dans le fichier de configuration. :action
 

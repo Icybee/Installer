@@ -66,9 +66,15 @@ function start()
 
 	]);
 
-	$core = new \Icybee\Core($autoconfig);
+	$core = new \ICanBoogie\Core($autoconfig);
 
 	$_SERVER['ICANBOOGIE_READY_TIME_FLOAT'] = microtime(true);
+
+	#
+	# disable the `sites` module
+	#
+
+	$core->modules->disable('sites');
 
 	#
 	# session
